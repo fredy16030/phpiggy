@@ -14,7 +14,8 @@ $dotenv = Dotenv::createImmutable(Paths::ROOT);
 $dotenv->load();
 
 $app = new App(Paths::SOURCE . "App/container-definitions.php");
-
+//cada vez que agreguemos una nueva configuracion debemos de ejecuta el composer-autoload
+//para generar los nuevos archivos
 registerRoutes($app);
 registerMiddleware($app);
 
